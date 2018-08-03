@@ -209,6 +209,7 @@ class Config(object):
             # sys.exit(1)
             self.port = 20741
             self.path = "./recordings/"
+            self.kaldi_model_path = "/opt/kaldi/model/kaldi-generic-en-tdnn_sp"
 			
         # Validate config:
         try:
@@ -216,6 +217,7 @@ class Config(object):
             #self.event_url = "http://{}/event".format(self.host)
             self.port = config.getint("app", "port")
             self.path = config.get("app", "path")
+            self.kaldi_model_path = config.get("app", "kaldi_model_path")
         except configparser.Error as e:
             print("Configuration Error:", e, file=sys.stderr)
             sys.exit(1)
