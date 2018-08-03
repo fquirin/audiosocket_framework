@@ -237,7 +237,7 @@ def main(argv=sys.argv[1:]):
         config = Config(args.config)
 		
         #----------------------------------------
-        DEFAULT_MODELDIR = '/opt/kaldi/model/kaldi-generic-en-tdnn_sp'
+        DEFAULT_MODELDIR = config.kaldi_model_path 		#'/opt/kaldi/model/kaldi-generic-en-tdnn_sp'
         model_dir = DEFAULT_MODELDIR
         
         info("Loading Zamia Kalid model %s ...", model_dir)
